@@ -7,7 +7,6 @@ import { Card, AlbumImage, AlbumTitle, ArtistName, TrackList, StatusMessage } fr
 
 function AlbumWithTracks({ album }) {
     const dispatch = useDispatch();
-
     const [showTracks, setShowTracks] = useState(false);
 
     const tracksUrl = showTracks ? `https://www.theaudiodb.com/api/v1/json/123/track.php?m=${album.idAlbum}` : null;
@@ -18,13 +17,12 @@ function AlbumWithTracks({ album }) {
         const newSong = {
             idTrack: track.idTrack,
             strTrack: track.strTrack,
-            strAlbum: album.strAlbum,
             strArtist: album.strArtist,
-            strAlbumThumb: album.strAlbumThumb
+            strAlbum: album.strAlbum
         };
         dispatch(addSong(newSong));
-        alert("Canción añadida!")
-    }
+        alert("¡Canción añadida!");
+    };
 
     return(
         <Card $active={showTracks}>

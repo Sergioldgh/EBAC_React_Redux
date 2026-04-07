@@ -19,6 +19,5 @@ export const NavLink = styled(Link)`
     color: ${props => props.theme.colors.white};
     font-size: 1.4rem;
     font-weight: bold;
-    padding-left: 10px;
-    }
-`
+    padding-left:10px;
+`;

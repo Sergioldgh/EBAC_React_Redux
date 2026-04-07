@@ -3,11 +3,11 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/themes";
 import { GlobalStyle } from "./styles/GlobalStyles";
-import Library from "./pages/Library";
 
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import SongDetail from "./pages/SongDetail";
+import Library from "./pages/Library";
 
 function App() {
   const [artist, setArtist] = useState("");
